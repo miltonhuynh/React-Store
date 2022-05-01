@@ -1,4 +1,16 @@
 #card_images {
-  border: 10px solid red;
+  border: 5px solid red;
   width: 200px;
+}
+
+#List_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#Card_container {
+  border: 5px solid red;
+  width: 10rem;
+  padding: 2rem;
+  margin: 2rem;
 }

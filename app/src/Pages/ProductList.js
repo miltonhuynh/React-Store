@@ -7,11 +7,12 @@ export default function ProductList({Items}) {
     <ProductCard
       image={single.image}  
       title={single.title}
+      price={single.price}
     />
   );
 
 
   return (
-    <div>{List_Of_Products}</div>
+    <div id="List_container">{List_Of_Products}</div>
   )
 }
