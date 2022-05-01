@@ -1,0 +1,27 @@
+import React from 'react'
+import { useState, useEffect } from 'react'
+import ProductList from './ProductList';
+
+export default function ProductPage() {
+    const [ProductsList, setProductsList] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await fetch("https://fakestoreapi.com/products");
+            const data = await response.json();
+            setProductsList(data);
+        }
+        fetchData();        
+    }, []);
+    
+    // Check if fetch has completed successfully before sending data to children
+    if(ProductsList != null) {
+      return (
+      <div>
+          <ProductList 
+            Items={ProductsList}
+          />
+      </div>
+      )
+    }
+  }
