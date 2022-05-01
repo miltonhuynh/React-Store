@@ -1,9 +1,17 @@
 import React from 'react'
+import ProductCard from './ProductCard';
 
 export default function ProductList({Items}) {
 
-    console.log(Items[1].title)
+  const List_Of_Products = Items.map((single) => 
+    <ProductCard
+      image={single.image}  
+      title={single.title}
+    />
+  );
+
+
   return (
-    <div>Poke</div>
+    <div>{List_Of_Products}</div>
   )
 }
