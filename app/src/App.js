@@ -3,7 +3,10 @@ import ProductPage from './Pages/ProductPage';
 
 function App() {
   return (
-    <ProductPage />
+    <div id="Page">
+      <div id="Site_title">Milton's store</div>
+      <ProductPage />
+    </div>
   );
 }
 
