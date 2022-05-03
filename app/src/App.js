@@ -1,12 +1,12 @@
 import './App.css';
-import ProductPage from './Pages/ProductPage';
+import ProductPage from './Components/ProductPage';
+import HeaderFooter from './Components/HeaderFooter';
 
 function App() {
   return (
-    <div id="Page">
-      <div id="Site_title">Milton's store</div>
+    <HeaderFooter>
       <ProductPage />
-    </div>
+    </HeaderFooter>
   );
 }
 
