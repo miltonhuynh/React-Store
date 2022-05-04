@@ -18,7 +18,6 @@ export default function ProductDetails() {
     return (
       <div>
         {SingleProduct.title}
-        Test
       </div>
     )
   }
