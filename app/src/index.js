@@ -16,8 +16,8 @@ root.render(
       <Routes>
         <Route path="/React-Store" element={<App />}>
           <Route index element={<ProductPage />} />
-          <Route path="ProductDetails" element={<ProductDetails />} />
         </Route>
+        <Route path="ProductDetails" element={<ProductDetails />} />
       </Routes>
     </BrowserRouter>
 );

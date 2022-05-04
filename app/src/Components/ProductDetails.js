@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 
 export default function ProductDetails() {
   const [SingleProduct, setSingleProduct] = useState(null);
@@ -16,7 +16,10 @@ export default function ProductDetails() {
   // Check if fetch has completed successfully before sending data to children
   if(SingleProduct != null) {
     return (
-    <div>{SingleProduct.title}</div>
+      <div>
+        {SingleProduct.title}
+        Test
+      </div>
     )
   }
 }
