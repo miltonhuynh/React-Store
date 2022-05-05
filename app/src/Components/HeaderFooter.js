@@ -5,7 +5,7 @@ export default function HeaderFooter(props) {
     <>
      <div id="Site_title">Header placeholder</div>
       {props.children}
-     <div id="Footer">Footer placeholder</div>
+     {/*<div id="Footer">Footer placeholder</div>*/}
     </>
   )
 }
