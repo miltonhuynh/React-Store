@@ -2,10 +2,10 @@ import {React, useCallback} from 'react'
 import { useNavigate } from "react-router-dom";
 
 
-export default function ProductCard({image, title, price}) {
+export default function ProductCard({image, title, price, key}) {
 
   const navigate = useNavigate();
-  const clicked = useCallback(() => navigate('ProductDetails', {replace: true}), [navigate]);
+  const clicked = useCallback(() => navigate('ProductDetails', {replace: true, id:key}), [navigate]);
 
   return (
     <div id="Card_container" onClick={clicked}>

@@ -6,7 +6,8 @@ export default function ProductDetails() {
 
   useEffect(() => {
       const fetchData = async () => {
-          const response = await fetch("https://fakestoreapi.com/products/10");
+          const id = 5;
+          const response = await fetch(`https://fakestoreapi.com/products/${id}`);
           const data = await response.json();
           setSingleProduct(data);
       }
