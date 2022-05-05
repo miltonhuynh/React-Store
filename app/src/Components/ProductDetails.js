@@ -1,14 +1,14 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 export default function ProductDetails() {
   const [SingleProduct, setSingleProduct] = useState(null);
+  let params = useParams();
 
   useEffect(() => {
       const fetchData = async () => {
-          const id = 5;
-          const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+          const response = await fetch(`https://fakestoreapi.com/products/${params.id}`);
           const data = await response.json();
           setSingleProduct(data);
       }

@@ -8,6 +8,7 @@ export default function ProductList({Items}) {
   const List_Of_Products = Items.map((single) => 
     <ProductCard
       key={single.id}
+      id={single.id}
       image={single.image}  
       title={single.title}
       price={single.price}
@@ -17,7 +18,6 @@ export default function ProductList({Items}) {
 
   return (
     <div id="List_container">
-      <Link to="ProductDetails">Go to ProductDetails</Link>
       {List_Of_Products}
     </div>
   )
