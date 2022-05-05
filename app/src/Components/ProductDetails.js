@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 export default function ProductDetails() {
   const [SingleProduct, setSingleProduct] = useState(null);
@@ -18,7 +19,8 @@ export default function ProductDetails() {
   if(SingleProduct != null) {
     return (
       <div>
-        {SingleProduct.title}
+        <Link to="/React-Store">Back</Link>
+        <div>{SingleProduct.title}</div>
       </div>
     )
   }

@@ -1,3 +1,7 @@
+* {
+  background-color: lightgreen;
+}
+
 #Site_title {
   border: 3px solid red;
   font-size: 5rem;
@@ -33,8 +37,9 @@
 #Card_container {
   border: 5px solid green;
   width: 10rem;
+  height: 25rem;
   padding: 1rem;
-  margin: 1rem;
+  margin: 3rem;
 }
 
 #Card_container:hover {
