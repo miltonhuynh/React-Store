@@ -8,7 +8,7 @@ export default function ProductDetails() {
   const [Quantity, setQuantity] = useState();
   let params = useParams();
 
-  const {Cart, setCart} = useContext(CartContext);
+  const {setCart} = useContext(CartContext);
 
   useEffect(() => {
       const fetchData = async () => {
@@ -23,7 +23,7 @@ export default function ProductDetails() {
   function handleSubmit(event) {
     event.preventDefault();
     const title = Item.title;
-    setCart(Cart => [...Cart, title]);
+    setCart(Cart => [...Cart, {title, Quantity}]);
 }
   
   // Check if fetch has completed successfully before sending data to children
