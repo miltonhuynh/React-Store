@@ -15,7 +15,9 @@ function App() {
   return (
     <HeaderFooter>
       <CartContext.Provider value={{Cart, setCart}}>
-        <Outlet/>
+        <div id="List_container">
+          <Outlet/>
+        </div>
       </CartContext.Provider>
     </HeaderFooter>
   );

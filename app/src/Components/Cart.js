@@ -10,7 +10,8 @@ export default function Cart() {
   const Cart_list = Cart.map((single) =>
     <CartItem
       title={single.title}
-      quantity={single.Quantity}
+      quantity={single.quantity}
+      price={single.price}
     />
   );
 

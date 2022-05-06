@@ -20,7 +20,7 @@ export default function ProductPage() {
     // Check if fetch has completed successfully before sending data to children
     if(isLoading === true) {
       return (
-          <div id="Loading">WAIT PLS...</div>
+          <div id="Loading">Loading Home</div>
       ) 
     } else if(ProductsList != null) {
       return (

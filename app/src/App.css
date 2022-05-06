@@ -1,7 +1,3 @@
-* {
-  background-color: lightgreen;
-}
-
 #Loading {
   font-size: 10rem;
 }
@@ -17,6 +13,8 @@
   display: flex;
   justify-content: space-around;
   font-size: 3rem;
+  padding: 1rem;
+  border: 5px solid black;
 }
 
 #Footer {
@@ -39,17 +37,12 @@
   font-size: 1.5rem;
 }
 
-#List_container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 #Card_container {
   border: 5px solid green;
   width: 15rem;
   height: 25rem;
   padding: 1rem;
-  margin: 3rem;
+  margin: 1rem;
 }
 
 #Card_container:hover {

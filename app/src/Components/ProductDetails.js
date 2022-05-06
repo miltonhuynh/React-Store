@@ -5,7 +5,7 @@ import { CartContext } from '../App';
 
 export default function ProductDetails() {
   const [Item, setItem] = useState(null);
-  const [Quantity, setQuantity] = useState();
+  let [quantity, setQuantity] = useState();
   const [isLoading, setisLoading] = useState();
   let params = useParams();
 
@@ -26,11 +26,17 @@ export default function ProductDetails() {
   function handleSubmit(event) {
     event.preventDefault();
     const title = Item.title;
-    setCart(Cart => [...Cart, {title, Quantity}]);
+    const price = Item.price;
+
+    // If user does not change quantity, set to 1, bypass onChange
+    if(quantity === undefined) {
+      quantity = 1;
+    }
+    setCart(Cart => [...Cart, {title, quantity, price}]);
 }
-  if (isLoading == true) {
+  if (isLoading === true) {
     return (
-      <div id="Loading">WAIT PLS...</div>
+      <div id="Loading">Loading Details</div>
     )
   } else if(Item != null) {
     return (
