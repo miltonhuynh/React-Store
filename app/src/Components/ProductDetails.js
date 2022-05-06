@@ -30,7 +30,7 @@ export default function ProductDetails() {
 }
   if (isLoading == true) {
     return (
-      <div id="Loading">Fetching...</div>
+      <div id="Loading">WAIT PLS...</div>
     )
   } else if(Item != null) {
     return (
