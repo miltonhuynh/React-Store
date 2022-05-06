@@ -1,15 +1,22 @@
 import './App.css';
 import HeaderFooter from './Components/HeaderFooter';
 import {Outlet} from 'react-router-dom';
-import {createContext} from 'react'
+import {useState, createContext} from 'react';
+
+
+export const CartContext = createContext();
 
 function App() {
   
-  const Cart = createContext([]);
+  const [Cart, setCart] = useState([]);
+
+  //https://stackoverflow.com/questions/58936042/pass-context-between-siblings-using-context-in-react
 
   return (
     <HeaderFooter>
-      <Outlet/>
+      <CartContext.Provider value={{Cart, setCart}}>
+        <Outlet/>
+      </CartContext.Provider>
     </HeaderFooter>
   );
 }

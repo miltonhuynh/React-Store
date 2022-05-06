@@ -1,11 +1,14 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { useParams, Link } from 'react-router-dom';
+import { CartContext } from '../App';
 
 export default function ProductDetails() {
   const [Item, setItem] = useState(null);
   const [Quantity, setQuantity] = useState();
   let params = useParams();
+
+  const {Cart, setCart} = useContext(CartContext);
 
   useEffect(() => {
       const fetchData = async () => {
@@ -18,7 +21,8 @@ export default function ProductDetails() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(Quantity);
+    //setCart(Item.title);
+    setCart(Cart => [...Cart, Item.title]);
 }
   
   // Check if fetch has completed successfully before sending data to children
