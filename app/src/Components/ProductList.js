@@ -1,6 +1,5 @@
 import React from 'react'
 import ProductCard from './ProductCard';
-import { Link } from "react-router-dom";
 
 export default function ProductList({Items}) {
 
@@ -14,8 +13,7 @@ export default function ProductList({Items}) {
       price={single.price}
     />
   );
-
-
+  
   return (
     <div id="List_container">
       {List_Of_Products}

@@ -1,10 +1,12 @@
 import './App.css';
-import ProductPage from './Components/ProductPage';
 import HeaderFooter from './Components/HeaderFooter';
 import {Outlet} from 'react-router-dom';
-
+import {createContext} from 'react'
 
 function App() {
+  
+  const Cart = createContext([]);
+
   return (
     <HeaderFooter>
       <Outlet/>
