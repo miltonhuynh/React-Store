@@ -7,6 +7,8 @@ export default function Cart() {
   const {Cart, setCart} = useContext(CartContext);
 
   return (
-    <div>{Cart}</div>
+    <div id="List_container">
+      {Cart}
+    </div>
   )
 }

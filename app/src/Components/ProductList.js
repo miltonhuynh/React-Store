@@ -15,7 +15,7 @@ export default function ProductList({Items}) {
   );
   
   return (
-    <div id="List_container">
+    <div id="ProductCard">
       {List_Of_Products}
     </div>
   )

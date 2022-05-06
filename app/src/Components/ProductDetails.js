@@ -19,10 +19,11 @@ export default function ProductDetails() {
       fetchData();        
   }, [params.id]);
 
+
   function handleSubmit(event) {
     event.preventDefault();
-    //setCart(Item.title);
-    setCart(Cart => [...Cart, Item.title]);
+    const title = Item.title;
+    setCart(Cart => [...Cart, {title,Quantity}]);
 }
   
   // Check if fetch has completed successfully before sending data to children
