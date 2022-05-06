@@ -10,7 +10,7 @@ function App() {
   
   const [Cart, setCart] = useState([]);
 
-  //https://stackoverflow.com/questions/58936042/pass-context-between-siblings-using-context-in-react
+  //https://www.youtube.com/watch?v=3yrMcx02jXs
 
   return (
     <HeaderFooter>
