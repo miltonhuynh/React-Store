@@ -2,6 +2,10 @@
   background-color: lightgreen;
 }
 
+#Loading {
+  font-size: 10rem;
+}
+
 #Site_title {
   border: 3px solid red;
   font-size: 5rem;

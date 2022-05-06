@@ -6,15 +6,18 @@ import { CartContext } from '../App';
 export default function ProductDetails() {
   const [Item, setItem] = useState(null);
   const [Quantity, setQuantity] = useState();
+  const [isLoading, setisLoading] = useState();
   let params = useParams();
 
   const {setCart} = useContext(CartContext);
 
   useEffect(() => {
+      setisLoading(true);
       const fetchData = async () => {
           const response = await fetch(`https://fakestoreapi.com/products/${params.id}`);
           const data = await response.json();
           setItem(data);
+          setisLoading(false);
       }
       fetchData();        
   }, [params.id]);
@@ -25,9 +28,11 @@ export default function ProductDetails() {
     const title = Item.title;
     setCart(Cart => [...Cart, {title, Quantity}]);
 }
-  
-  // Check if fetch has completed successfully before sending data to children
-  if(Item != null) {
+  if (isLoading == true) {
+    return (
+      <div id="Loading">Fetching...</div>
+    )
+  } else if(Item != null) {
     return (
       <>
       <Link to="/React-Store">Back</Link>
