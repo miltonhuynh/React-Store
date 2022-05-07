@@ -7,10 +7,7 @@ export default function CartItem({title, quantity, price}) {
   const {Cart, setCart} = useContext(CartContext);
 
   function remove_item() {
-    console.log(Cart);
-
-    const filteredItems = Cart.filter(item => item !== title)
-    setCart(filteredItems);
+    setCart([2])
   }
 
   return (

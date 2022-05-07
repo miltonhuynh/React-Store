@@ -1,15 +1,30 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function HeaderFooter(props) {
+
+  let navigate = useNavigate();
+  function goHome () {
+    navigate("/React-Store", { replace: true });
+  }
+  function goCart () {
+    navigate("/React-Store/Cart", { replace: true });
+  }
+  function goCheckout () {
+    navigate("/React-Store/Checkout", { replace: true });
+  }
+
   return (
     <>
-      <div id="Navbar">
-        <Link to="/React-Store">Home</Link>
-        <Link to="/React-Store/Cart">Cart</Link>
-        <Link to="/React-Store/Checkout">Checkout</Link>
+      <div id="Header">
+        <div id="Brand">amazone</div>
+        <div id="Navbar">
+          <div className="Link" onClick={goHome}>Home</div>
+          <div className="Link" onClick={goCart}>Cart</div>
+          <div className="Link" onClick={goCheckout}>Checkout</div>
+        </div>
       </div>
-          {props.children}
+      {props.children}
     </>
   )
 }
