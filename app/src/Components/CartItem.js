@@ -6,11 +6,13 @@ export default function CartItem({title, quantity, price}) {
 
   const {Cart, setCart} = useContext(CartContext);
 
-  //var filtered = someArray.filter(function(el) { return el.Name != "Kristian"; });
   function remove_item() {
-    let removed = Cart.filter(function(remove) { return remove.title === title})
-    setCart(removed);
+    console.log(Cart);
+
+    const filteredItems = Cart.filter(item => item !== title)
+    setCart(filteredItems);
   }
+
   return (
     <div id="Cart_item">
         <div>Title: {title}</div>
@@ -20,3 +22,4 @@ export default function CartItem({title, quantity, price}) {
     </div>
     )
   }
+

@@ -15,6 +15,7 @@ export default function Cart() {
 
   const Cart_list = Cart.map((single) =>
     <CartItem
+      key={single.title}
       title={single.title}
       quantity={single.quantity}
       price={single.price}
