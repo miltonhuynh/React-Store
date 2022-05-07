@@ -2,10 +2,16 @@ import {React, useContext} from 'react'
 import { CartContext } from '../App';
 import CartItem from './CartItem';
 
-
 export default function Cart() {
 
+  let total = 0;
+
   const {Cart} = useContext(CartContext);
+
+  Cart.map((single) =>
+    total += (single.price * single.quantity)
+  );
+
 
   const Cart_list = Cart.map((single) =>
     <CartItem
@@ -15,29 +21,12 @@ export default function Cart() {
     />
   );
 
+
+
   return (
     <div id="List_container">
       {Cart_list}
+      Total of cart: ${total}
     </div>
   )
 }
-
-/*
-const list_of_movies = list.map((single) => 
-      <MovieCard
-          posterUrl={single.Poster}
-          title={single.Title}
-          type={single.Type}
-          isModalOpen={isModalOpen}
-          setIsModalOpen={setIsModalOpen}
-          movieID={single.imdbID}
-          setmovieID={setmovieID}
-      />
-    );
-
-  return (
-    <div id="MovieList">
-      {list_of_movies}
-    </div>
-  )
-  */

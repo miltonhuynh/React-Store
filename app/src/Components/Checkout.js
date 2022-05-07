@@ -10,8 +10,18 @@ export default function Checkout() {
     total += (single.price * single.quantity)
   );
 
+  function handleSubmit () {
+    return null;
+  }
+ 
 
   return (
-    <div>{total}</div>
+    <>
+      <form onSubmit={handleSubmit} id="Quantity_form">
+              
+      <div>Total cost: ${total}</div>
+              <button type="submit">Order</button>
+            </form>
+    </>
   )
 }
