@@ -22,12 +22,16 @@ export default function Cart() {
     />
   );
 
-
-
-  return (
-    <div id="List_container">
-      {Cart_list}
-      Total of cart: ${total}
-    </div>
+  if(Cart.length == 0) {
+    return (
+      <div style={{fontSize: "3rem"}}>Cart is empty!</div>
+    )
+  } else {
+    return (
+      <div id="List_container">
+        {Cart_list}
+        Total of cart: ${total}
+      </div>
   )
+  }
 }

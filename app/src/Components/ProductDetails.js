@@ -28,7 +28,7 @@ export default function ProductDetails() {
     const title = Item.title;
     const price = Item.price;
 
-    // If user does not change quantity, set to 1, bypass onChange
+    // If user does not change quantity, set to 1, onChange only works when quantity is changed away from 1
     if(quantity === undefined) {
       quantity = 1;
     }
