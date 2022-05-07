@@ -40,14 +40,13 @@ export default function ProductDetails() {
     )
   } else if(Item != null) {
     return (
-      <>
-      <Link to="/React-Store">Back</Link>
+      <div id="Details_page">
         <div id="Details_container">
           <img src={Item.image} id="Details_image" alt="About item"></img>
           <div id="Details_title">{Item.title}</div>
-          <div id="Details_price">${Item.price}</div>
-          <div id="Details_price">Category: {Item.category}</div>
-          <div id="Details_price">Description: {Item.description}</div>
+          <div id="Details_price">Price: ${Item.price}</div>
+          <div id="Details_category">Category: {Item.category}</div>
+          <div id="Details_decription">Description: {Item.description}</div>
 
           <form onSubmit={handleSubmit} id="Quantity_form">
             <label htmlFor="quantity">Quantity:</label>
@@ -66,7 +65,7 @@ export default function ProductDetails() {
               <button type="submit">Add to cart</button>
             </form>
         </div>
-      </>
+      </div>
     )
   }
 }

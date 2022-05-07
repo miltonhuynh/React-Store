@@ -11,6 +11,10 @@
   height: 4rem;
 }
 
+#Footer {
+  background-color: orange;
+}
+
 #Brand {
   font-size: 3rem;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -84,15 +88,17 @@
 }
 
 #Card_titles {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 #Card_prices {
   font-size: 1.5rem;
 }
 
-
-
+#Details_page {
+  display: flex;
+  align-items: center;
+}
 
 #Details_container {
   display: flex;
@@ -100,13 +106,11 @@
   align-items: center;
   width: 30rem;
   text-align: center;
-  position: relative;
-  left: 20rem;
-  border: 5px solid black;
+  border: 1px solid black;
 }
 
 #Details_title {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 #Details_image {
@@ -115,6 +119,14 @@
 
 #Details_price {
   font-size: 1.5rem;
+}
+
+#Details_category {
+  font-size: 1.3rem;
+}
+
+#Details_description {
+  font-size: 1rem;
 }
 
 #Cart_item {
