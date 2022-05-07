@@ -17,7 +17,7 @@ export default function HeaderFooter(props) {
   return (
     <>
       <div id="Header">
-        <div id="Brand">store name</div>
+        <div id="Brand" onClick={goHome}>store name</div>
         <div id="Navbar">
           <div className="Link" onClick={goHome}>Home</div>
           <div className="Link" onClick={goCart}>Cart</div>

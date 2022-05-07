@@ -7,7 +7,7 @@ export default function CartItem({title, quantity, price}) {
   const {Cart, setCart} = useContext(CartContext);
 
   function remove_item() {
-    setCart([2])
+    return null;
   }
 
   return (

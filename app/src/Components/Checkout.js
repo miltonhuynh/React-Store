@@ -29,9 +29,7 @@ export default function Checkout() {
  
 
   return (
-    <>
-      <div>Total cost: ${total}</div>
-
+    <div id="Checkout_container">
       <form onSubmit={handleSubmit} id="form">
         <label for="name">Name: </label>
         <input
@@ -57,8 +55,9 @@ export default function Checkout() {
             type="text"
             onChange = {(event) => setCredit(event.target.value)}
         />
-        <button type="submit">Add to cart</button>
-    </form>
-    </>
+        <div>Total cost: ${total}</div>
+        <button type="submit">Place order</button>
+      </form>
+    </div>
   )
 }
