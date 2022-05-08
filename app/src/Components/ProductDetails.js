@@ -9,7 +9,7 @@ import { faHourglass } from '@fortawesome/free-solid-svg-icons'
 
 export default function ProductDetails() {
   const [Item, setItem] = useState(null);
-  let [quantity, setQuantity] = useState();
+  let [quantity, setQuantity] = useState(1);
   const [isLoading, setisLoading] = useState();
   let params = useParams();
 
@@ -36,10 +36,6 @@ export default function ProductDetails() {
     const price = Item.price;
     const image = Item.image;
 
-    // If user does not change quantity, set to 1, onChange only works when quantity is changed away from 1
-    if(quantity === undefined) {
-      setQuantity = 1;
-    }
     setCart(Cart => [...Cart, {title, quantity, setQuantity, price, image}]);
     navigate("../", { replace: true });
 }

@@ -23,6 +23,8 @@ export default function Cart() {
     />
   );
 
+  total = total.toFixed(2);
+
   if(Cart.length === 0) {
     return (
       <div id="Empty_cart">
@@ -33,7 +35,7 @@ export default function Cart() {
       return (
         <div id="Cart_container">
           {Cart_list}
-          Total of cart: ${total}
+          <div id="Total_cost">Cart total: ${total}</div>
         </div>
     )
   }

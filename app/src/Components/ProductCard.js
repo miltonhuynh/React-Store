@@ -5,6 +5,9 @@ export default function ProductCard({image, title, price, id}) {
 
   let navigate = useNavigate();
 
+  //Rounds prices to 2 decimal points
+  price = price.toFixed(2);
+
   return (
     <div id="Card_container" onClick={() => navigate(`ProductDetails/${id}`)}>
         <img id="Card_images" src={image} alt="Shows item"></img>

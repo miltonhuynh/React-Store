@@ -27,36 +27,42 @@ export default function Checkout() {
     navigate("../", { replace: true });
   }
  
+  //Rounds prices to 2 decimal points
+  total = total.toFixed(2);
 
   return (
     <div id="Checkout_container">
       <form onSubmit={handleSubmit} id="form">
-        <label for="name">Name: </label>
+        <label for="input_name" id="Form_name_label"  class="Form_label">Name: </label>
         <input
-            id="name"
+            id="input_name"
+            class="input_field"
             type="text"
             onChange = {(event) => setName(event.target.value)}
         />
-        <label for="name">Shipping address: </label>
+        <label for="input_shipping" class="Form_label">Shipping address: </label>
         <input
-            id="name"
+            id="input_shipping"
+            class="input_field"
             type="text"
             onChange = {(event) => setShipping(event.target.value)}
         />
-        <label for="name">Billing address: </label>
+        <label for="input_billing" class="Form_label">Billing address: </label>
         <input
-            id="name"
+            id="input_billing"
+            class="input_field"
             type="text"
             onChange = {(event) => setBilling(event.target.value)}
         />
-        <label for="name">Credit card: </label>
+        <label for="input_credit" class="Form_label">Credit card: </label>
         <input
-            id="name"
+            id="input_credit"
+            class="input_field"
             type="text"
             onChange = {(event) => setCredit(event.target.value)}
         />
-        <div>Total cost: ${total}</div>
-        <button type="submit">Place order</button>
+        <div id="Total_cost_checkout">Total cost: ${total}</div>
+        <button id="Place_order" type="submit">Place order</button>
       </form>
     </div>
   )
