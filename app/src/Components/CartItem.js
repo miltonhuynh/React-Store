@@ -1,18 +1,12 @@
 import {React, useContext} from 'react'
 import { CartContext } from '../App';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 export default function CartItem({title, quantity, price, image}) {
 
   const {Cart, setCart} = useContext(CartContext);
   
-  function increase_quantity() {
-    return null
-  }
-
-  function decrease_quantity() {
-    return null
-  }
-
   function remove_item() {
     const index = Cart.findIndex((x) => x.title === title);
     let left = Cart.slice(0, index); 
@@ -27,9 +21,7 @@ export default function CartItem({title, quantity, price, image}) {
         <div id="Cart_title">Title: {title}</div>
         <div id="Cart_quantity">Quantity: {quantity}</div>
         <div id="Cart_price">Price each: ${price}</div>
-        <button onClick={() => decrease_quantity()}>-</button>
-        <button onClick={() => increase_quantity()}>+</button>
-        <button onClick={() => remove_item()}>Delete</button>
+        <div id="Delete_item" onClick={() => remove_item()}><FontAwesomeIcon id="Delete_item" icon={faTrash} /></div>
       </div>
     </div>
     )

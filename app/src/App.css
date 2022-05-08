@@ -168,7 +168,6 @@ html,body {
   margin-left: 3rem;
 }
 
-
 #Card_images {
   margin: 1rem;
   border: 0.1rem solid black;
@@ -240,6 +239,17 @@ html,body {
   font-family: 'Dongle', sans-serif;
 }
 
+#Delete_item {
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#Delete_item:hover {
+  font-size: 3rem;
+}
+
 #Quantity_label {
   color: white;
   font-size: 1.5rem;
@@ -287,7 +297,8 @@ html,body {
 }
 
 #Cart_image {
-  width: 10rem;
+  max-width: 10rem;
+  max-height: 15rem;
   margin-right: 2rem;
 }
 
