@@ -4,8 +4,6 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faHome } from '@fortawesome/free-solid-svg-icons'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
-import { faRectangleAd } from '@fortawesome/free-solid-svg-icons'
-
 
 export default function HeaderFooter(props) {
 

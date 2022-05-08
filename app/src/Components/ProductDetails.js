@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect, useContext } from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { CartContext } from '../App';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
@@ -26,6 +26,9 @@ export default function ProductDetails() {
       fetchData();        
   }, [params.id]);
 
+  let navigate = useNavigate();
+
+
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -37,6 +40,7 @@ export default function ProductDetails() {
       quantity = 1;
     }
     setCart(Cart => [...Cart, {title, quantity, price}]);
+    navigate("../", { replace: true });
 }
   if (isLoading === true) {
     return (
