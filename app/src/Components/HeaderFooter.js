@@ -1,5 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
+import { faRectangleAd } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function HeaderFooter(props) {
@@ -18,11 +23,11 @@ export default function HeaderFooter(props) {
   return (
     <>
       <div id="Header">
-        <div id="Brand" onClick={goHome}>TheReactStore</div>
+        <div id="Brand" onClick={goHome}>The React Store</div>
         <div id="Navbar">
-          <div className="Link" onClick={goHome}>Home</div>
-          <div className="Link" onClick={goCart}>Cart</div>
-          <div className="Link" onClick={goCheckout}>Checkout</div>
+          <div onClick={goHome}><FontAwesomeIcon className="Nav-icon" icon={faHome} /></div>
+          <div onClick={goCart}><FontAwesomeIcon className="Nav-icon" icon={faCartShopping} /></div>
+          <div onClick={goCheckout}><FontAwesomeIcon className="Nav-icon" icon={faCircleCheck} /></div>
         </div>
       </div>
       {props.children}

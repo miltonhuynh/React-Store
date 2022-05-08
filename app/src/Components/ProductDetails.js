@@ -2,6 +2,8 @@ import React from 'react'
 import { useState, useEffect, useContext } from 'react'
 import { useParams } from 'react-router-dom';
 import { CartContext } from '../App';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 
 export default function ProductDetails() {
   const [Item, setItem] = useState(null);
@@ -62,7 +64,7 @@ export default function ProductDetails() {
                 <option value="9">9</option>
                 <option value="10">10</option>
               </select>
-              <button type="submit">Add to cart</button>
+              <button type="submit"><FontAwesomeIcon id="Add-cart-button" icon={faCartPlus} /></button>
             </form>
         </div>
       </div>
