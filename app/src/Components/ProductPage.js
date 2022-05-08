@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import ProductList from './ProductList';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faHourglass } from '@fortawesome/free-solid-svg-icons'
 
 export default function ProductPage() {
     const [ProductsList, setProductsList] = useState(null);
@@ -20,7 +22,7 @@ export default function ProductPage() {
     // Check if fetch has completed successfully before sending data to children
     if(isLoading === true) {
       return (
-          <div id="Loading">Loading Home</div>
+          <div id="Loading"><FontAwesomeIcon className="Hourglass" icon={faHourglass} /></div>
       ) 
     } else if(ProductsList != null) {
       return (

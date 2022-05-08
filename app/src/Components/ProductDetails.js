@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom';
 import { CartContext } from '../App';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
+import { faHourglass } from '@fortawesome/free-solid-svg-icons'
+
 
 export default function ProductDetails() {
   const [Item, setItem] = useState(null);
@@ -38,7 +40,7 @@ export default function ProductDetails() {
 }
   if (isLoading === true) {
     return (
-      <div id="Loading">Loading Details</div>
+      <div id="Loading"><FontAwesomeIcon className="Hourglass" icon={faHourglass} /></div>
     )
   } else if(Item != null) {
     return (
@@ -48,11 +50,11 @@ export default function ProductDetails() {
           <div id="Details_title">{Item.title}</div>
           <div id="Details_price">Price: ${Item.price}</div>
           <div id="Details_category">Category: {Item.category}</div>
-          <div id="Details_decription">Description: {Item.description}</div>
+          <div id="Details_description">Description: {Item.description}</div>
 
           <form onSubmit={handleSubmit} id="Quantity_form">
-            <label htmlFor="quantity">Quantity:</label>
-              <select id="quantity" name="quantity" onChange = {(event) => setQuantity(event.target.value)}>
+            <label id="Quantity_label" htmlFor="quantity">Quantity:</label>
+              <select id="Quantity_selector" name="quantity" onChange = {(event) => setQuantity(event.target.value)}>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>

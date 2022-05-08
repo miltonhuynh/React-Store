@@ -24,7 +24,7 @@ export default function Cart() {
 
   if(Cart.length === 0) {
     return (
-      <div style={{fontSize: "3rem", height: "100vh"}}>Cart is empty!</div>
+      <div id="Empty_cart">Cart is empty!</div>
     )
   } else {
     return (

@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap');
+
 html,body {
   width: 100%;
   height: 100%;
@@ -43,7 +47,7 @@ html,body {
 
 #Brand {
   font-size: 3rem;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Permanent Marker', cursive;
   margin-left: 2rem;
   color: white;
   display: flex;
@@ -95,17 +99,18 @@ html,body {
 #Card_container {
   display: flex;
   background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 2%;
   width: 40vw;
-  height: 30vh;
+  height: 40vh;
   padding: 1rem;
-  margin: 3rem;
+  margin: 2rem;
   transition: 0.5s;
 }
 
 #Card_container:hover {
   background-color: rgba(0, 0, 0, 0.8);
   width: 40.5vw;
-  height: 30.5vh;
+  height: 40.5vh;
 }
 
 #Item_title-price {
@@ -117,23 +122,29 @@ html,body {
 
 
 #Card_images {
-  padding: 1rem;
+  margin: 1rem;
+  border: 0.1rem solid black;
+  border-radius: 5%;
+  max-width: 50%;
 }
 
 #Card_titles {
   font-size: 1.5rem;
   color: white;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 #Card_prices {
-  font-size: 1.5rem;
+  font-size: 6rem;
   color: white;
-
+  font-family: 'Zen Loop', cursive;
 }
 
 #Details_page {
   display: flex;
   align-items: center;
+  justify-content: center;
+  height: 90vh;
 }
 
 #Details_container {
@@ -142,12 +153,15 @@ html,body {
   align-items: center;
   width: 50rem;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 3rem;
 }
 
 #Details_title {
   font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 #Details_image {
@@ -155,15 +169,46 @@ html,body {
 }
 
 #Details_price {
-  font-size: 1.5rem;
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 1rem;
+  font-family: 'Zen Loop', cursive;
 }
 
 #Details_category {
   font-size: 1.3rem;
+  color: white;
+  margin-bottom: 1rem;
 }
 
 #Details_description {
   font-size: 1rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+#Quantity_label {
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+#Quantity_selector {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+#Add-cart-button {
+  font-size: 1.5rem;
+}
+
+#Empty_cart {
+  position: relative;
+  left: 37rem;
+  font-size: 5rem;
+  height: 100vh;
+  color: white;
+  top: 15rem;
 }
 
 #Cart_item {
@@ -189,4 +234,12 @@ html,body {
   height: 50vh;
   padding: 2rem;
   justify-content: space-between;
+}
+
+.Hourglass {
+  position: relative;
+  color: white;
+  font-size: 12rem;
+  left: 48rem;
+  top: 10rem;
 }
