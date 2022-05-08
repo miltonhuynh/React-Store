@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect, useContext } from 'react'
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { CartContext } from '../App';
 
 export default function ProductDetails() {

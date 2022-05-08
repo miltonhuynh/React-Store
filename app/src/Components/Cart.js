@@ -22,7 +22,7 @@ export default function Cart() {
     />
   );
 
-  if(Cart.length == 0) {
+  if(Cart.length === 0) {
     return (
       <div style={{fontSize: "3rem"}}>Cart is empty!</div>
     )

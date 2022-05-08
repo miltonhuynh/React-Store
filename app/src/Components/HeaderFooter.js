@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+
 
 export default function HeaderFooter(props) {
 
@@ -17,7 +18,7 @@ export default function HeaderFooter(props) {
   return (
     <>
       <div id="Header">
-        <div id="Brand" onClick={goHome}>store name</div>
+        <div id="Brand" onClick={goHome}>TheReactStore</div>
         <div id="Navbar">
           <div className="Link" onClick={goHome}>Home</div>
           <div className="Link" onClick={goCart}>Cart</div>
