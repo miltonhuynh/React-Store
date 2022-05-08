@@ -11,6 +11,7 @@ export default function ProductList({Items}) {
       image={single.image}  
       title={single.title}
       price={single.price}
+      stars={single.rating.rate}
     />
   );
   

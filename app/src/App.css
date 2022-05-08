@@ -10,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spectral+SC:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
 html,body {
   width: 100%;
@@ -157,8 +158,6 @@ html,body {
 
 #Card_container:hover {
   background-color: rgba(0, 0, 0, 0.5);
-  width: 40.5vw;
-  height: 40.5vh;
 }
 
 #Item_title-price {
@@ -182,9 +181,15 @@ html,body {
 }
 
 #Card_prices {
-  font-size: 6rem;
+  font-size: 4rem;
   color: white;
   font-family: 'Zen Loop', cursive;
+}
+
+#Card_ratings {
+  color: white;
+  font-family: 'Bungee', cursive;
+  font-size: 2rem;
 }
 
 #Details_page {
