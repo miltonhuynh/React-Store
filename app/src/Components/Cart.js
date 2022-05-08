@@ -19,19 +19,22 @@ export default function Cart() {
       title={single.title}
       quantity={single.quantity}
       price={single.price}
+      image={single.image}
     />
   );
 
   if(Cart.length === 0) {
     return (
-      <div id="Empty_cart">Cart is empty!</div>
+      <div id="Empty_cart">
+        <div id="Empty_cart-text">Cart is empty!</div>
+      </div>
     )
   } else {
-    return (
-      <div id="List_container">
-        {Cart_list}
-        Total of cart: ${total}
-      </div>
-  )
+      return (
+        <div id="Cart_container">
+          {Cart_list}
+          Total of cart: ${total}
+        </div>
+    )
   }
 }

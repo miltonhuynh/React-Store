@@ -34,17 +34,21 @@ export default function ProductDetails() {
     event.preventDefault();
     const title = Item.title;
     const price = Item.price;
+    const image = Item.image;
 
     // If user does not change quantity, set to 1, onChange only works when quantity is changed away from 1
     if(quantity === undefined) {
-      quantity = 1;
+      setQuantity = 1;
     }
-    setCart(Cart => [...Cart, {title, quantity, price}]);
+    setCart(Cart => [...Cart, {title, quantity, setQuantity, price, image}]);
     navigate("../", { replace: true });
 }
   if (isLoading === true) {
     return (
-      <div id="Loading"><FontAwesomeIcon className="Hourglass" icon={faHourglass} /></div>
+      <div id="Loading">
+        <div id="Loading_text">Loading Product Details</div>
+        <FontAwesomeIcon className="Hourglass" icon={faHourglass} />
+      </div>
     )
   } else if(Item != null) {
     return (

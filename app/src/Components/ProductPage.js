@@ -22,7 +22,10 @@ export default function ProductPage() {
     // Check if fetch has completed successfully before sending data to children
     if(isLoading === true) {
       return (
-          <div id="Loading"><FontAwesomeIcon className="Hourglass" icon={faHourglass} /></div>
+          <div id="Loading">
+            <div id="Loading_text">Loading Products</div>
+            <FontAwesomeIcon className="Hourglass" icon={faHourglass} />
+          </div>
       ) 
     } else if(ProductsList != null) {
       return (
