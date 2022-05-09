@@ -169,20 +169,19 @@ html,body {
 }
 
 #Card_images {
-  margin: 1rem;
-  border: 0.1rem solid black;
+  margin: 0.5rem;
   border-radius: 5%;
   max-width: 50%;
 }
 
 #Card_titles {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: white;
   font-family: 'Julius Sans One', sans-serif;
 }
 
 #Card_prices {
-  font-size: 4rem;
+  font-size: 3rem;
   color: white;
   font-family: 'Zen Loop', cursive;
 }
@@ -213,33 +212,33 @@ html,body {
 }
 
 #Details_title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-family: 'Julius Sans One', sans-serif;
 }
 
 #Details_image {
-  width: 8rem;
-  margin-bottom: 1rem;
+  max-height: 9rem;
+  margin-bottom: 0.5rem;
 }
 
 #Details_price {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: white;
   margin-bottom: 0.3rem;
   font-family: 'Zen Loop', cursive;
 }
 
 #Details_category {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
   margin-bottom: 0.3rem;
   font-family: 'Spectral SC', serif;
 }
 
 #Details_description {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: white;
   margin-bottom: 0.3rem;
   font-family: 'Dongle', sans-serif;
