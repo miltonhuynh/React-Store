@@ -100,12 +100,12 @@ html,body {
   color: white;
   display: flex;
   align-items: center;
-  transition: 0.3s;
+  transition: 0.2s;
   cursor: pointer;
 }
 
 #Brand:hover {
-  font-size: 3.2rem;
+  color: yellow;
 }
 
 #Navbar {
