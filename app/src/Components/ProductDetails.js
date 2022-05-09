@@ -28,8 +28,6 @@ export default function ProductDetails() {
 
   let navigate = useNavigate();
 
-
-
   function handleSubmit(event) {
     event.preventDefault();
     const title = Item.title;
@@ -57,7 +55,7 @@ export default function ProductDetails() {
           <div id="Details_description">Description: {Item.description}</div>
 
           <form onSubmit={handleSubmit} id="Quantity_form">
-            <label id="Quantity_label" htmlFor="quantity">Quantity:</label>
+            <label id="Quantity_label" htmlFor="quantity">Quantity: </label>
               <select id="Quantity_selector" name="quantity" onChange = {(event) => setQuantity(event.target.value)}>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -71,6 +69,7 @@ export default function ProductDetails() {
                 <option value="10">10</option>
               </select>
               <button type="submit"><FontAwesomeIcon id="Add-cart-button" icon={faCartPlus} /></button>
+              
             </form>
         </div>
       </div>
