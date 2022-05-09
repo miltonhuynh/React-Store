@@ -25,9 +25,9 @@ export default function HeaderFooter(props) {
         <div id="Brand" onClick={goHome}>The React Store</div>
         <div id="Github-icon"><a href="https://github.com/miltonhuynh/React-Store"><Githubicon/></a></div>
         <div id="Navbar">
-          <div onClick={goHome}><FontAwesomeIcon className="Nav-icon" icon={faHome} /></div>
-          <div onClick={goCart}><FontAwesomeIcon className="Nav-icon" icon={faCartShopping} /></div>
-          <div onClick={goCheckout}><FontAwesomeIcon className="Nav-icon" icon={faCircleCheck} /></div>
+          <div className="Nav-icon" onClick={goHome}><FontAwesomeIcon icon={faHome} /></div>
+          <div className="Nav-icon" onClick={goCart}><FontAwesomeIcon icon={faCartShopping} /></div>
+          <div className="Nav-icon" onClick={goCheckout}><FontAwesomeIcon icon={faCircleCheck} /></div>
         </div>
       </div>
       {props.children}
