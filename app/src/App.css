@@ -73,6 +73,8 @@ html,body {
   width: 3rem;
   transition: 0.5s;
   margin-top: 1rem;
+  position: relative;
+  right: 3rem;
 }
 
 #Github-icon:hover {
@@ -269,10 +271,10 @@ html,body {
 }
 
 #Empty_cart {
-  position: relative;
-  left: 37rem;
+  display: flex;
+  justify-content: center;
   font-size: 5rem;
-  height: 51vh;
+  height: 80vh;
   color: white;
   font-family: 'Schoolbell', cursive;
 }
