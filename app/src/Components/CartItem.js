@@ -15,6 +15,7 @@ export default function CartItem({title, quantity, price, image, rerender}) {
 
   function increase() {
     const index = Cart.findIndex((x) => x.title === title);
+    Cart[index].quantity = parseInt(Cart[index].quantity);
     Cart[index].quantity += 1;
     setQuantity_change(Cart[index].quantity);
     rerender();

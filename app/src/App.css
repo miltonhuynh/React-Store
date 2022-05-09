@@ -238,10 +238,11 @@ html,body {
 }
 
 #Details_description {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: white;
   margin-bottom: 0.3rem;
   font-family: 'Dongle', sans-serif;
+  line-height: 80%;
 }
 
 #Quantity_label {
