@@ -1,10 +1,11 @@
-import {React, useState, useContext} from 'react'
+import { React, useState, useContext } from 'react'
 import { CartContext } from '../App';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faMinus } from '@fortawesome/free-solid-svg-icons'
 
+// Renders product details for specific item as well as plus and minus quantity icons
 export default function CartItem({title, quantity, price, image, rerender}) {
 
   const {Cart, setCart} = useContext(CartContext);
@@ -54,11 +55,14 @@ export default function CartItem({title, quantity, price, image, rerender}) {
 
   return (
     <div id="Cart_item">
+      {/* Renders specific product details */}
       <img src={image} id="Cart_image" alt="About item"></img>
       <div id="Cart_title-quantity-price">
         <div id="Cart_title">{title}</div>
+        {/* Renders current quantity in cart */}
         <div id="Cart_quantity">
           Quantity: {quantity_change}
+          {/* Renders increment quantity icons and remove item button to change or delete item on cart */}
           <div id="Increment_quantity">
             <FontAwesomeIcon className="Increment_icon" icon={faMinus} onClick={() => decrease()}/>
             <FontAwesomeIcon className="Increment_icon" icon={faPlus} onClick={() => increase()} />
