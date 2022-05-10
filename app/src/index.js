@@ -13,7 +13,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
+      {/* Nested routes inside App.js to render pages as children inside Header and Footer elements */}
       <Route path="/React-Store" element={<App />}>
+          {/* Renders products list, details page, cart and checkout pages */}
           <Route index element={<ProductPage />} />
           <Route path="/React-Store/ProductDetails/:id" element={<ProductDetails />} />
           <Route path="/React-Store/Cart" element={<Cart />} />
