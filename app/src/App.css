@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Economica&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spinnaker&display=swap');
@@ -428,6 +428,6 @@ html,body {
 }
 
 #Created_by {
-  font-family: 'Bad Script', cursive;
-  font-size: 2rem;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  font-size: 1.5rem;
 }
