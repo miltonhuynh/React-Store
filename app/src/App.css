@@ -161,7 +161,7 @@ html,body {
 
 #Card_container:hover {
   background-color: rgba(0, 0, 0, 0.35);
-  box-shadow: 20px 25px 25px rgba(0, 0, 0, 0.75);
+  box-shadow: 30px 35px 25px rgba(0, 0, 0, 0.75);
   transform: translateY(-30px);
 }
 
