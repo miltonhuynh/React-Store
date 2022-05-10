@@ -221,6 +221,7 @@ html,body {
   border-radius: 5%;
   padding: 2rem;
   position: relative;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
 }
 
 #Details_title {
@@ -380,10 +381,11 @@ html,body {
   width: 30rem;
   position: relative;
   top: -2rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .Form_label {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: white;
   font-family: 'Spinnaker', sans-serif;
   cursor: pointer;
