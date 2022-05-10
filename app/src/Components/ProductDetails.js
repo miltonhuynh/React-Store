@@ -13,6 +13,7 @@ export default function ProductDetails() {
   const [isLoading, setisLoading] = useState();
   let params = useParams();
 
+  // useContext brings in Cart array from App.js, will allow user to add objects "items" to cart
   const {setCart} = useContext(CartContext);
 
   useEffect(() => {
@@ -53,7 +54,7 @@ export default function ProductDetails() {
           <div id="Details_price">Price: ${Item.price}</div>
           <div id="Details_category">Category: {Item.category}</div>
           <div id="Details_description">Description: {Item.description}</div>
-
+          {/* This form asks the user quantity of the item to add to cart, submit will send value to handleSubmit */}
           <form onSubmit={handleSubmit} id="Quantity_form">
             <label id="Quantity_label" htmlFor="quantity">Quantity: </label>
               <select id="Quantity_selector" name="quantity" onChange = {(event) => setQuantity(event.target.value)}>

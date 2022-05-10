@@ -8,11 +8,13 @@ import { faMinus } from '@fortawesome/free-solid-svg-icons'
 export default function CartItem({title, quantity, price, image, rerender}) {
 
   const {Cart, setCart} = useContext(CartContext);
+  // Created to update user on item's quantity in real-time
   const [quantity_change, setQuantity_change] = useState(quantity);
 
-  //Rounds dollar amount to 2 decimal places
+  // Rounds dollar amount to 2 decimal places
   price = price.toFixed(2);
 
+  // Calls when user clicks on "+" button, increase quantity of item by 1
   function increase() {
     const index = Cart.findIndex((x) => x.title === title);
     Cart[index].quantity = parseInt(Cart[index].quantity);
@@ -21,6 +23,7 @@ export default function CartItem({title, quantity, price, image, rerender}) {
     rerender();
   }
 
+  // Calls when user clicks on "-" button, decrease quantity of item by 1
   function decrease() {
     const index = Cart.findIndex((x) => x.title === title);
     // Prevents user from decreasing quantity below 0
