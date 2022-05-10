@@ -144,6 +144,7 @@ html,body {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 1.5rem;
 }
 
 #Card_container {
@@ -160,8 +161,8 @@ html,body {
 
 #Card_container:hover {
   background-color: rgba(0, 0, 0, 0.35);
-  box-shadow: 15px 15px 15px black;
-  transform: translateY(-15px);
+  box-shadow: 25px 25px 20px black;
+  transform: translateY(-30px);
 }
 
 #Item_title-price {
