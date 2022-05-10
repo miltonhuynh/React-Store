@@ -74,7 +74,7 @@ html,body {
   transition: 0.3s;
   margin-top: 1rem;
   position: relative;
-  right: 11rem;
+  right: 11vw;
 }
 
 #Github-icon:hover {
@@ -86,7 +86,7 @@ html,body {
   font-size: 2.5rem;
   margin-top: 1.5rem;
   position: relative;
-  right: 15rem;
+  left: 1.5rem;
   transition: 0.3s;
 }
 
@@ -116,10 +116,6 @@ html,body {
   align-items: center;
   transition: 0.2s;
   cursor: pointer;
-}
-
-#Brand:hover {
-  color: yellow;
 }
 
 #Navbar {
