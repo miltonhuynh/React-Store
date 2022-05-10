@@ -159,6 +159,8 @@ html,body {
 
 #Card_container:hover {
   background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 20px 20px 15px black;
+  transform: translateY(-20px);
 }
 
 #Item_title-price {
