@@ -29,6 +29,7 @@ export default function CartItem({title, quantity, price, image, rerender}) {
       setQuantity_change(Cart[index].quantity);
       rerender();
     }
+    // If user tries to decrease quantity below 1, will ask to confirm, if yes then remove item from cart
     if(Cart[index].quantity === 0) {
       if(window.confirm("Remove item from cart?") === true ) {
       remove_item();
