@@ -32,6 +32,9 @@ export default function CartItem({title, quantity, price, image, rerender}) {
     if(Cart[index].quantity === 0) {
       if(window.confirm("Remove item from cart?") === true ) {
       remove_item();
+      } else {
+        Cart[index].quantity = 1;
+        setQuantity_change(Cart[index].quantity);
       }
     }
   }
