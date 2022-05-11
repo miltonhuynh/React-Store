@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Economica&display=swap');
@@ -13,6 +13,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
 
 html,body {
   width: 100%;
@@ -193,9 +194,9 @@ html,body {
 }
 
 #Card_prices {
-  font-size: 3rem;
+  font-size: 3.2rem;
   color: white;
-  font-family: 'Zen Loop', cursive;
+  font-family: 'Rampart One', cursive;
 }
 
 #Card_ratings {
@@ -240,7 +241,7 @@ html,body {
   font-size: 2.5rem;
   color: white;
   margin-bottom: 0.3rem;
-  font-family: 'Zen Loop', cursive;
+  font-family: 'Gruppo', cursive;
 }
 
 #Details_category {
