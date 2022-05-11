@@ -5,6 +5,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 // Renders each item as a separate card
 export default function ProductCard({image, title, price, stars, id}) {
 
+  // Hook used to let user navigate to specific (with useParams) product details page
   let navigate = useNavigate();
 
   // Rounds prices to 2 decimal points

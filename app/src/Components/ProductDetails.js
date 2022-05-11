@@ -77,6 +77,7 @@ export default function ProductDetails() {
                 <option value="9">9</option>
                 <option value="10">10</option>
               </select>
+              {/* Submitting form will add specified amount of items to cart, send user back to home page */}
               <button type="submit"><FontAwesomeIcon id="Add-cart-button" icon={faCartPlus} /></button>
               
             </form>

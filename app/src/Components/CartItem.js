@@ -20,6 +20,7 @@ export default function CartItem({title, quantity, price, image, rerender}) {
     const index = Cart.findIndex((x) => x.title === title);
     Cart[index].quantity = parseInt(Cart[index].quantity);
     Cart[index].quantity += 1;
+    // Re-render's page and lets user know quantity has increased by 1
     setQuantity_change(Cart[index].quantity);
     rerender();
   }
@@ -30,6 +31,7 @@ export default function CartItem({title, quantity, price, image, rerender}) {
     // Prevents user from decreasing quantity below 0
     if(Cart[index].quantity > 0) {
       Cart[index].quantity -= 1;
+          // Re-render's page and lets user know quantity has decreased by 1
       setQuantity_change(Cart[index].quantity);
       rerender();
     }
@@ -44,7 +46,10 @@ export default function CartItem({title, quantity, price, image, rerender}) {
     }
   }
   
-  // Removes current item from cart
+  /*
+   Removes current item from cart, finds index and then uses slice() function to add other 
+   items together without including the current item, the new array will exclude it.
+  */
   function remove_item() {
     const index = Cart.findIndex((x) => x.title === title);
     let left = Cart.slice(0, index); 
@@ -53,6 +58,7 @@ export default function CartItem({title, quantity, price, image, rerender}) {
     setCart([...left, ...right]);
   }
 
+  // Renders product details for specific item as well as plus and minus quantity icons
   return (
     <div id="Cart_item">
       {/* Renders specific product details */}

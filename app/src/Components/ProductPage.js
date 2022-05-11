@@ -24,11 +24,13 @@ export default function ProductPage() {
     // Check if fetch has completed successfully before sending data to children
     if(isLoading === true) {
       return (
+          // Lets user know that fetch is on-going
           <div id="Loading">
             <div id="Loading_text">Loading Products</div>
             <FontAwesomeIcon className="Hourglass" icon={faHourglass} />
           </div>
       ) 
+    // Prevents error, won't render products until fetch is complete 
     } else if(ProductsList != null) {
       return (
       <div>

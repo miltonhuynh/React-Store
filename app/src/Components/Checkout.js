@@ -6,6 +6,7 @@ export default function Checkout() {
 
   // Will store the total cost of the cart
   let total = 0;
+  // Uses cart to add up total price and display to user
   const {Cart, setCart} = useContext(CartContext);
 
   // Variables will hold user input data, for current purposes, this data is not sent anywhere
@@ -19,6 +20,7 @@ export default function Checkout() {
     total += (single.price * single.quantity)
   );
 
+  // Hook used to navigate user back to home page after form submitted
   let navigate = useNavigate();
 
   function handleSubmit () {
@@ -48,6 +50,7 @@ export default function Checkout() {
       <div id="Checkout_container">
         {/* Form contains input and label for Name, Shipping, Billing, Credit Card */}
         <form onSubmit={handleSubmit} id="form">
+          {/* Name label and input */}
           <label for="input_name" id="Form_name_label"  class="Form_label">Name: </label>
           <input
               id="input_name"
@@ -55,6 +58,7 @@ export default function Checkout() {
               type="text"
               onChange = {(event) => setName(event.target.value)}
           />
+          {/* Shipping label and input */}
           <label for="input_shipping" class="Form_label">Shipping address: </label>
           <input
               id="input_shipping"
@@ -62,6 +66,7 @@ export default function Checkout() {
               type="text"
               onChange = {(event) => setShipping(event.target.value)}
           />
+          {/* Billing label and input */}
           <label for="input_billing" class="Form_label">Billing address: </label>
           <input
               id="input_billing"
@@ -69,6 +74,7 @@ export default function Checkout() {
               type="text"
               onChange = {(event) => setBilling(event.target.value)}
           />
+          {/* Credit card label and input */}
           <label for="input_credit" class="Form_label">Credit card: </label>
           <input
               id="input_credit"
@@ -76,6 +82,7 @@ export default function Checkout() {
               type="text"
               onChange = {(event) => setCredit(event.target.value)}
           />
+          {/* Displays to user total cost of cart */}
           <div id="Total_cost_checkout">Total cost: ${total}</div>
           {/* Calls function that clears the cart and returns user to home page */}
           <button id="Place_order" type="submit">Place order</button>
