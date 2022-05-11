@@ -1,4 +1,4 @@
-import {React, useContext, useState} from 'react'
+import { React, useContext, useState } from 'react'
 import { CartContext } from '../App'
 import { useNavigate } from 'react-router-dom';
 
@@ -46,6 +46,7 @@ export default function Checkout() {
     // If cart is not empty, will render a form
     return (
       <div id="Checkout_container">
+        {/* Form contains input and label for Name, Shipping, Billing, Credit Card */}
         <form onSubmit={handleSubmit} id="form">
           <label for="input_name" id="Form_name_label"  class="Form_label">Name: </label>
           <input
@@ -76,6 +77,7 @@ export default function Checkout() {
               onChange = {(event) => setCredit(event.target.value)}
           />
           <div id="Total_cost_checkout">Total cost: ${total}</div>
+          {/* Calls function that clears the cart and returns user to home page */}
           <button id="Place_order" type="submit">Place order</button>
         </form>
       </div>
